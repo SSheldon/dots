@@ -1,5 +1,11 @@
 #! /usr/bin/env python
 
+from __future__ import print_function
+try:
+	input = raw_input
+except:
+	pass
+
 import os
 import os.path
 import optparse
@@ -116,7 +122,7 @@ def uninstall_all():
 		if uninstall(file):
 			i += 1
 
-	print '{0:d} link{1} removed'.format(i, 's' if i != 1 else '')
+	print('{0:d} link{1} removed'.format(i, 's' if i != 1 else ''))
 
 def install(file, force=False):
 	"""Install a file.
@@ -146,7 +152,7 @@ def install(file, force=False):
 			# If a link already exists, see if it points to this file
 			# to prevent extra warnings caused by previous runs
 			if read_link_abs(dest) != src:
-				print 'Could not link "{0}" to "{1}": File exists'.format(src, dest)
+				print('Could not link "{0}" to "{1}": File exists'.format(src, dest))
 			return False
 
 	# Use relative links if the dotfiles are contained in home
@@ -166,12 +172,12 @@ def install_all(force=False):
 	if os.system('cc {0} -o {1}'.format(answerback_src, answerback_bin)) == 0:
 		links['answerback.' + uname] = 'bin/answerback.' + uname
 	else:
-		print 'Could not compile answerback.'
+		print('Could not compile answerback.')
 
 	# Create private git config and add it to links
 	if not os.path.exists(os.path.join(scriptdir, 'gitprivate')):
-		name = raw_input('Full name for Git config (enter to skip): ')
-		email = raw_input('Email address for Git config (enter to skip): ')
+		name = input('Full name for Git config (enter to skip): ')
+		email = input('Email address for Git config (enter to skip): ')
 		if name or email:
 			with open(os.path.join(scriptdir, 'gitprivate'), 'w') as config:
 				config.write('[user]\n')
@@ -188,7 +194,7 @@ def install_all(force=False):
 		if install(file, force):
 			i += 1
 
-	print '{0:d} link{1} created'.format(i, 's' if i != 1 else '')
+	print('{0:d} link{1} created'.format(i, 's' if i != 1 else ''))
 
 def main():
 	class RawHelpFormatter(optparse.IndentedHelpFormatter):
