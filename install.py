@@ -49,6 +49,8 @@ links = {
 	'Wombat.xccolortheme':  'Library/Application Support/Xcode/Color Themes/Wombat.xccolortheme',
 #	'Wombat.dvtcolortheme': 'Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme',
 
+	'Preferences.sublime-settings': 'Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings',
+
 	'gitconfig': '.gitconfig',
 	'gitignore': '.gitignore',
 
