@@ -31,6 +31,10 @@
 	hist = log --graph --pretty=format:'%C(cyan)%h%Creset -%C(yellow)%d%Creset %s %C(magenta)[%an]%Creset %Cgreen(%ad)%Creset' --date=relative
 
 	vimdiff = difftool -y -t vimdiff
+
+	sup = submodule update --init --recursive
+	upset = !git fetch && git reset --hard FETCH_HEAD
+	dm = !git diff $(git merge-base HEAD master)
 [color]
 	diff = auto
 	status = auto
