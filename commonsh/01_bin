@@ -3,3 +3,6 @@ concat_path "/usr/local/bin"
 concat_path "${HOME}/bin"
 concat_path "${HOME}/sbin"
 concat_manpath "${HOME}/share/man"
+
+# Homebrew Ruby gems executable directory
+concat_path "/usr/local/opt/ruby/bin"
