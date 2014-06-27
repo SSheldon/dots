@@ -53,11 +53,13 @@ links = {
 
 	'gitconfig': '.gitconfig',
 	'gitignore': '.gitignore',
+	'gitattributes': '.gitattributes',
 
 	'tigrc':     '.tigrc',
 
 	'caffeinate': 'bin/caffeinate',
 	'lock':       'bin/lock',
+	'sqlite2txt': 'bin/sqlite2txt',
 
 	'git-info':            'bin/git-info',
 	'git-untrack-ignored': 'bin/git-untracked-ignored',

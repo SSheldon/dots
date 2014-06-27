@@ -41,8 +41,11 @@
 	branch = auto
 [core]
 	pager = less -FRSX
+	attributesfile = ~/.gitattributes
 	excludesfile = ~/.gitignore
 	safecrlf = true
+[diff "sqlite"]
+	textconv = sqlite2txt
 [push]
 	default = tracking
 [include]
