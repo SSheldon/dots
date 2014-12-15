@@ -46,6 +46,8 @@
 	safecrlf = true
 [diff "sqlite"]
 	textconv = sqlite2txt
+[merge]
+	conflictstyle = diff3
 [push]
 	default = tracking
 [include]
