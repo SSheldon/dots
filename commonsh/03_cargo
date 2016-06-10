@@ -1,0 +1,4 @@
+#! /bin/sh
+
+# Rust Cargo executable directory
+concat_path "${HOME}/.cargo/bin"
