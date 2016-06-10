@@ -96,6 +96,4 @@ alias rm='rm -ir'
 alias df='df -h'
 alias du='du -h'
 
-alias ping='ping -c4'
-
 command -v time >/dev/null 2>&1 && alias time='command time'
