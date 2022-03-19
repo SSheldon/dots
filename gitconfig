@@ -48,6 +48,8 @@
 	textconv = sqlite2txt
 [merge]
 	conflictstyle = diff3
+[pull]
+	ff = only
 [push]
 	default = tracking
 [include]
