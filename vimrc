@@ -47,8 +47,6 @@ set visualbell             " Turn visual bell on
 set t_vb=                  " Make the visual bell emit nothing
 set showcmd                " Show the current command
 
-set diffopt+=iwhite
-
 " ---- Filetypes ----
 if has('syntax')
    syntax on
