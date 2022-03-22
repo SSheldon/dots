@@ -1,5 +1,6 @@
 # prompt
 RESETCOLOR=''
+USERCOLOR=''
 HOSTCOLOR=''
 PATHCOLOR=''
 VCSCOLOR=''
@@ -12,6 +13,7 @@ case "${TERM}" in
 	*)
 		if command -v tput >/dev/null 2>&1 && [ `tput colors` != -1 ] ; then
 			RESETCOLOR=$'%b%f'
+			USERCOLOR=$'%B%F{yellow}'
 			if [ -z "${SSH_TTY}" ] ; then
 				HOSTCOLOR=$'%B%F{green}'
 			else
@@ -31,6 +33,6 @@ esac
 zstyle ':vcs_info:git:*' formats ' (%b)'
 zstyle ':vcs_info:git:*' actionformats ' (%b|%a)'
 
-PROMPT=${RESETCOLOR}${HOSTCOLOR}$'%n@%m'${BLACKCOLOR}':'${PATHCOLOR}$'%42<...<%~%<<'${VCSCOLOR}$'${vcs_info_msg_0_} %(?.'${PATHCOLOR}$'.'${BOLDERRORCOLOR}$')%(!.#.$) '${RESETCOLOR}
+PROMPT=${RESETCOLOR}${USERCOLOR}$'%n'${RESETCOLOR}$'@'${HOSTCOLOR}$'%m'${BLACKCOLOR}':'${PATHCOLOR}$'%42<...<%~%<<'${VCSCOLOR}$'${vcs_info_msg_0_} %(?.'${PATHCOLOR}$'.'${BOLDERRORCOLOR}$')%(!.#.$) '${RESETCOLOR}
 
 RPROMPT=${RESETCOLOR}$'%1(j.'${JOBCOLOR}$'[%j].)%(?..'${ERRORCOLOR}$'[%?])'${CLOCKCOLOR}$'[%t]'${RESETCOLOR}
