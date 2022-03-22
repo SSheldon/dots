@@ -1,6 +1,8 @@
 # terminal titles
 precmd()
 {
+	vcs_info
+
 	local termtitle
 
 	termtitle=`print -P "%n@${HOST}[%l]"`

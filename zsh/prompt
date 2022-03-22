@@ -2,6 +2,7 @@
 RESETCOLOR=''
 HOSTCOLOR=''
 PATHCOLOR=''
+VCSCOLOR=''
 BOLDERRORCOLOR=''
 BLACKCOLOR=''
 
@@ -17,6 +18,7 @@ case "${TERM}" in
 				HOSTCOLOR=$'%{\e[01;36m%}'
 			fi
 			PATHCOLOR=$'%{\e[01;34m%}'
+			VCSCOLOR=$'%{\e[01;36m%}'
 			ERRORCOLOR=$'%{\e[00;31m%}'
 			BOLDERRORCOLOR=$'%{\e[01;31m%}'
 			CLOCKCOLOR=$'%{\e[01;33m%}'
@@ -26,6 +28,9 @@ case "${TERM}" in
 		;;
 esac
 
-PROMPT=${RESETCOLOR}${HOSTCOLOR}$'%n@%m'${BLACKCOLOR}':'${PATHCOLOR}$'%45<...<%~ %(?..'${BOLDERRORCOLOR}$')%(!.#.$) '${RESETCOLOR}
+zstyle ':vcs_info:git:*' formats ' (%b)'
+zstyle ':vcs_info:git:*' actionformats ' (%b|%a)'
+
+PROMPT=${RESETCOLOR}${HOSTCOLOR}$'%n@%m'${BLACKCOLOR}':'${PATHCOLOR}$'%42<...<%~%<<'${VCSCOLOR}$'${vcs_info_msg_0_} %(?.'${PATHCOLOR}$'.'${BOLDERRORCOLOR}$')%(!.#.$) '${RESETCOLOR}
 
 RPROMPT=${RESETCOLOR}$'%1(j.'${JOBCOLOR}$'[%j].)%(?..'${ERRORCOLOR}$'[%?])'${CLOCKCOLOR}$'[%t]'${RESETCOLOR}

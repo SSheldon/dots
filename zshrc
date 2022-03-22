@@ -8,6 +8,8 @@ autoload compinit; compinit -d "${HOME}/.zsh/.zcompdump-${HOST}"
 autoload age
 autoload zmv
 
+autoload -Uz vcs_info
+
 if [ ${ZSH_VERSION//.} -gt 420 ] ; then
 	autoload -U url-quote-magic
 	zle -N self-insert url-quote-magic
