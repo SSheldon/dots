@@ -11,19 +11,19 @@ case "${TERM}" in
 	;;
 	*)
 		if command -v tput >/dev/null 2>&1 && [ `tput colors` != -1 ] ; then
-			RESETCOLOR=$'%{\e[00;00m%}'
+			RESETCOLOR=$'%b%f'
 			if [ -z "${SSH_TTY}" ] ; then
-				HOSTCOLOR=$'%{\e[01;32m%}'
+				HOSTCOLOR=$'%B%F{green}'
 			else
-				HOSTCOLOR=$'%{\e[01;36m%}'
+				HOSTCOLOR=$'%B%F{cyan}'
 			fi
-			PATHCOLOR=$'%{\e[01;34m%}'
-			VCSCOLOR=$'%{\e[01;36m%}'
-			ERRORCOLOR=$'%{\e[00;31m%}'
-			BOLDERRORCOLOR=$'%{\e[01;31m%}'
-			CLOCKCOLOR=$'%{\e[01;33m%}'
-			JOBCOLOR=$'%{\e[00;36m%}'
-			BLACKCOLOR=$'%{\e[00;30m%}'
+			PATHCOLOR=$'%B%F{blue}'
+			VCSCOLOR=$'%B%F{cyan}'
+			ERRORCOLOR=$'%b%F{red}'
+			BOLDERRORCOLOR=$'%B%F{red}'
+			CLOCKCOLOR=$'%B%F{yellow}'
+			JOBCOLOR=$'%b%F{cyan}'
+			BLACKCOLOR=$'%b%F{black}'
 		fi
 		;;
 esac
