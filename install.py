@@ -46,7 +46,7 @@ links = {
 	'xmobarrc':  '.xmobarrc',
 	'xmonad.hs': '.xmonad/xmonad.hs',
 
-	'Wombat.xccolortheme':  'Library/Application Support/Xcode/Color Themes/Wombat.xccolortheme',
+	'Wombat.xccolortheme':  'Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.xccolortheme',
 #	'Wombat.dvtcolortheme': 'Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme',
 
 	'Preferences.sublime-settings': 'Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings',
